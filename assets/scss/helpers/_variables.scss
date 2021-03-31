@@ -1,0 +1,14 @@
+// Colors
+$primary: hsl(207, 53%, 31%);
+$secondary: hsl(206, 33%, 45%);
+$black-drop-shadow: hsla(0, 0%, 0%, 0.3);
+
+// Defaults
+$default-padding-tb: 1.5em;
+
+// Breakpoints - 1023px, 779px, 489px
+$breakpoint: (
+  "large": "63.9375em",
+  "medium": "48.6875em",
+  "small": "30.5625em",
+);

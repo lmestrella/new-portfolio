@@ -1,0 +1,22 @@
+@mixin breakpoint($size) {
+  @media (max-width: map-get($map: $breakpoint, $key: $size)) {
+    @content;
+  }
+}
+
+@mixin line-break {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent 10%,
+    rgba($secondary, 0.25) 50%,
+    transparent 90%
+  );
+
+  @content;
+}

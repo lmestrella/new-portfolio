@@ -1,0 +1,154 @@
+.grid {
+  display: grid;
+
+  &-ji-c {
+    justify-items: center;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+
+  &-ac-fs {
+    align-content: flex-start;
+  }
+}
+
+body {
+  padding: 2em 0;
+}
+
+.portfolio {
+  min-height: 100vh;
+  margin: auto;
+
+  &__footer {
+    max-height: 10em;
+  }
+
+  &__socials {
+    grid-template-columns: repeat(3, 1.5em);
+    column-gap: 1.5em;
+    padding: $default-padding-tb 0;
+  }
+
+  @include breakpoint(medium) {
+    // max-width: 30ch;
+    row-gap: 5em;
+  }
+}
+
+.profile {
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  column-gap: 5em;
+
+  &__intro {
+    max-width: 45ch;
+    padding: $default-padding-tb 0;
+
+    @include breakpoint(small) {
+      padding: $default-padding-tb 2em;
+    }
+  }
+
+  &__photo {
+    > img {
+      max-width: 12em;
+      filter: drop-shadow(0 3px 2px $black-drop-shadow);
+    }
+
+    @include breakpoint(medium) {
+      grid-row: 1 / 2;
+      max-width: 13em;
+      margin: $default-padding-tb 0;
+    }
+  }
+
+  @include breakpoint(medium) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    justify-items: center;
+  }
+}
+
+.project {
+  &__title {
+    position: relative;
+    padding: $default-padding-tb 0;
+
+    &::before {
+      @include line-break {
+        top: 0;
+      }
+    }
+
+    &::after {
+      @include line-break {
+        bottom: 0;
+      }
+    }
+
+    &::before,
+    &::after {
+      @include breakpoint(medium) {
+        display: block;
+      }
+    }
+
+    @include breakpoint(medium) {
+      max-width: 50ch;
+      padding: 2em 10%;
+    }
+  }
+
+  &__card-group {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 2em;
+
+    @include breakpoint(medium) {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto;
+      row-gap: 2em;
+      margin: 3em 0;
+    }
+  }
+
+  &__card {
+    background: hsl(0, 0%, 100%);
+    box-shadow: 0 2px 5px -2px $black-drop-shadow;
+    border-radius: 1.5em;
+    overflow: hidden;
+  }
+
+  &__preview {
+    overflow: hidden;
+
+    img {
+      max-height: 13em;
+      transition: 250ms transform ease-out;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+      }
+
+      @include breakpoint(large) {
+        max-height: 10em;
+      }
+
+      @include breakpoint(medium) {
+        max-height: 15em;
+      }
+    }
+  }
+
+  &__details {
+    padding: 1.125em;
+  }
+}
