@@ -233,11 +233,20 @@ body {
   }
 }
 
+.project__card {
+  background: white;
+  -webkit-box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 0.3);
+  border-radius: 1.5em;
+  overflow: hidden;
+}
+
 .project__card-group {
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: auto;
       grid-template-rows: auto;
+  row-gap: 2em;
   -webkit-column-gap: 2em;
           column-gap: 2em;
 }
@@ -251,14 +260,6 @@ body {
     row-gap: 2em;
     margin: 3em 0;
   }
-}
-
-.project__card {
-  background: white;
-  -webkit-box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 0.3);
-  border-radius: 1.5em;
-  overflow: hidden;
 }
 
 .project__preview {

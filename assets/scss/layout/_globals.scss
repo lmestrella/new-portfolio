@@ -106,24 +106,25 @@ body {
     }
   }
 
-  &__card-group {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    column-gap: 2em;
-
-    @include breakpoint(medium) {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto auto auto;
-      row-gap: 2em;
-      margin: 3em 0;
-    }
-  }
-
   &__card {
     background: hsl(0, 0%, 100%);
     box-shadow: 0 2px 5px -2px $black-drop-shadow;
     border-radius: 1.5em;
     overflow: hidden;
+
+    &-group {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto;
+      row-gap: 2em;
+      column-gap: 2em;
+
+      @include breakpoint(medium) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        row-gap: 2em;
+        margin: 3em 0;
+      }
+    }
   }
 
   &__preview {
